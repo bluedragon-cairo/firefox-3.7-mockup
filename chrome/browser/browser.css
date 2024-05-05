@@ -2734,13 +2734,24 @@ toolbarbutton, .toolbarbutton-1 {
     background: transparent;
   }
 
-  /* the new titlebar requires this, or content will be clipped at the top of the screen. */
-  #main-window[sizemode="maximized"][chromemargin^="0,"] {
-    margin-top: 0px;
+  @media (-moz-os-version: windows-win10) {
+    #main-window[sizemode="maximized"][chromemargin^="0,"] {
+      margin-top: 0px;
+    }
+
+    #main-window[sizemode="normal"][chromemargin^="0,"] {
+      margin-top: 1px;
+    }
   }
 
-  #main-window[sizemode="normal"][chromemargin^="0,"] {
-    margin-top: 1px;
+  @media not all and (-moz-os-version: windows-win10) {
+    #main-window[sizemode="maximized"][chromemargin^="0,"] {
+      margin-top: 8px;
+    }
+
+    #main-window[sizemode="normal"][chromemargin^="0,"] {
+      margin-top: 2px;
+    }
   }
 
   #main-window:not(:-moz-lwtheme)[inFullscreen="true"] {
@@ -2802,6 +2813,13 @@ toolbarbutton, .toolbarbutton-1 {
     text-shadow: white -1px -1px .5em, white -1px 1px .5em, white 1px 1px .5em, white 1px -1px .5em;
   }
   
+  /*
+  This Windows 10 media block is licenced under MPL 2.0!!!!!
+  
+  All copyrighters goes to the Pale Moon developers (Moonchild, etc)
+   If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  
+  */
   @media (-moz-os-version: windows-win10) {
     /* Draw XUL caption buttons and background on Win10 */
     @media (-moz-windows-accent-color-applies: 0) {
