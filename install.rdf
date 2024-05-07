@@ -9,7 +9,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>firefox37m@pb</em:id>
-    <em:version>1.0.8</em:version>
+    <em:version>1.0.9</em:version>
     <em:name>Firefox 3.7 Mockup (Revision 2)</em:name>
     <em:description>Firefox 3.7 mockup ported to Pale Moon</em:description>
     <em:creator>길고(달빛) (Original by Tro)</em:creator>
